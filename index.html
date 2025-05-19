@@ -2,14 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./Urban-Haven-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="./Urban-Haven-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Moon+Dance&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <title>Urban Haven Apartments</title>
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
     <div class="container">
-      <h2>Urban Haven</h2>
+      <header class="flex" id="home">
+        <div class="contact-info-holder flex">
+          <h3 title="Find Urban Haven at Murang'a Kiharu">
+            <i class="fa-solid fa-location-dot"></i>
+            Murang'a, Kiharu
+          </h3>
+          <a
+            href="mailto:urhaven@apartments.com"
+            title="E-mail Urban Haven Apartments"
+            ><i class="fa-solid fa-envelope"></i> Email:The Urban Haven</a
+          >
+          <a href="tel:+254718764327" title="Call Urban Haven Apartments">
+            <i class="fa-solid fa-phone"></i> +254-712-345678</a
+          >
+        </div>
+        <div class="navigate flex">
+          <h2 class="title">
+            Urban Haven <span class="subtitle">Apartments</span>
+          </h2>
+          <ul class="navs flex">
+            <li><a href="#home">Home</a></li>
+            <li><a href="http://">U-Haven Specials</a></li>
+            <li><a href="http://">Reach out</a></li>
+            <li><a href="http://">About</a></li>
+          </ul>
+          <i class="fa-solid fa-bars menu"></i>
+        </div>
+      </header>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -13,20 +13,168 @@
   -moz-osx-font-smoothing: grayscale;
 
   --light-orange: rgb(254, 235, 209);
-  --light-white: #f7f7f7;
+  --light-white: #ebe9e9;
   --slate: slategray;
   --dark-slate: darkslategray;
   --light-slate: lightslategray;
+  --color-dark: rgb(27, 29, 30);
+  --orange: rgb(255, 111, 0);
+  --dark-orange: rgb(220, 105, 23);
+  --dark-blue: rgb(4, 43, 106);
 
-
+  --font-main: "open sans";
+  --font-other: "Moon Dance";
 }
-
-*{
+::selection {
+  background-color: var(--light-orange);
+  color: var(--dark-orange);
+}
+/* Customizing classes */
+.flex {
+  display: flex;
+}
+/* End of customizing classes */
+* {
   margin: 0;
   padding: 0;
+  font-family: var(--font-main);
+  position: relative;
+  color: var(--color-dark);
 }
-h2{
+html {
+  font-size: 10px;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+header {
+  position: relative;
+  width: 98.3%;
+  min-height: 10rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem 1rem;
+  background-color: var(--light-orange);
+}
+
+.contact-info-holder,
+.navigate {
+  width: 98%;
+  margin: 1rem auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info-holder {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  justify-content: center;
+  gap: 15%;
+}
+
+.contact-info-holder h3 {
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+}
+.contact-info-holder i {
+  color: var(--orange);
+}
+
+.contact-info-holder a {
+  color: var(--dark-blue);
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-align: justify !important;
+}
+
+.contact-info-holder :where(a, i, h3):hover,
+.contact-info-holder :where(a, h3):hover i {
+  color: var(--orange);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.navigate {
+  background-color: var(--slate); /*#99bcc6; */
+  min-width: full;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+}
+
+.navigate > h2.title {
+  color: var(--dark-blue);
+  font-size: 3rem;
+  width: 30%;
+  text-align: left;
+  padding-left: 2rem;
+  text-wrap: nowrap;
+}
+.navigate h2 > span.subtitle {
+  font-family: "dancing script";
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--dark-orange);
+  position: absolute;
+  left: 2.5rem;
+  bottom: -1.5rem;
+  z-index: 1;
+}
+.navigate .navs {
+  position: relative;
+  list-style-type: none;
+  min-width: 65%;
+  justify-content: space-evenly;
+  font-size: 1.8rem;
+}
+
+.navigate .navs li {
   background-color: var(--light-slate);
-  display: inline;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  transition: scale 0.3s ease-in-out;
+  cursor: pointer;
+}
+.navs li a {
   color: var(--light-white);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.2mm;
+}
+
+.navs li:hover {
+  background-color: var(--dark-orange);
+  scale: 1.1;
+}
+
+.navs li:first-of-type {
+  background-color: var(--orange);
+}
+
+.navigate i.menu {
+  font-size: 3.5rem;
+  color: var(--dark-blue);
+  display: none;
+}
+
+@media screen and (max-width: 46em) {
+  .navs {
+    display: none;
+  }
+  .navigate {
+    margin: 0;
+  }
+  .navigate i.menu {
+    display: flex;
+    margin-right: 10%;
+  }
+  .contact-info-holder {
+    flex-direction: column;
+    align-items: self-start;
+    gap: 0.5rem;
+  }
+  .contact-info-holder > * {
+    margin: 0;
+  }
 }
