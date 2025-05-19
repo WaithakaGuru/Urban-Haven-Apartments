@@ -213,6 +213,9 @@ section.hero-container{
 .hero-details-holder strong{
   color: var(--orange);
 }
+.hero-details-holder :where(h3, p){
+  line-height: 1.8cm;
+}
 .hero-details-holder p{
   font-weight: 600;
   font-size: 2.4rem;
@@ -224,11 +227,11 @@ section.hero-container{
 }
 
 .unique-details{
-  width: 80%;
-  margin: 1.5rem auto;
+  width: 99%;
+  margin: 1.5rem auto 0;
   justify-content: center;
   flex-wrap: wrap;
-  gap: .8rem;
+  gap: 1rem;
 }
 
 .unique-detail{
@@ -236,11 +239,10 @@ section.hero-container{
   color: var(--dark-orange);
   padding: 1rem 2rem;
   border-radius: 2.8rem;
-  min-height: 10rem;
-  width: 25rem;
+  width: 23rem;
   text-align: center;
   place-content: center;
-  margin: .5rem;
+  margin: .5rem 0;
   flex-direction: column;
   font-size: 1.8rem;
 }
