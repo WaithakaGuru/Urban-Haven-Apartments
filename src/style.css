@@ -22,17 +22,22 @@
   --orange: rgb(228, 115, 28);
   --dark-orange: rgb(220, 105, 23);
   --dark-blue: rgb(4, 43, 106);
+  --dark-brown: rgb(90, 43, 2);
 
   --font-main: "open sans";
   --font-other: "Moon Dance";
 }
 ::selection {
-  background-color: var(--light-orange);
-  color: var(--dark-orange);
+  background-color: var(--light-white);
+  color: var(--dark-slate);
 }
 /* Customizing classes */
 .flex {
   display: flex;
+}
+button,
+button > a {
+  all: unset;
 }
 /* End of customizing classes */
 * {
@@ -105,8 +110,7 @@ header {
   border-radius: 0.5rem;
   padding: 2rem 1rem;
   position: sticky !important;
-  top: 10rem; 
-
+  top: 10rem;
 }
 
 .navigate > h2.title {
@@ -164,11 +168,11 @@ header {
   display: none;
 }
 @media screen and (max-width: 56em) and (min-width: 46em) {
-  .navs li:hover{
+  .navs li:hover {
     scale: 1.03;
   }
   .navs li {
-    padding: .8rem!important;
+    padding: 0.8rem !important;
   }
 }
 
@@ -194,11 +198,11 @@ header {
 }
 
 /* Hero Section */
-section.hero-container{
+section.hero-container {
   background-color: var(--medium-slate);
   width: full;
 }
-.hero-details-holder{
+.hero-details-holder {
   position: relative;
   min-width: 50%;
   flex-direction: column;
@@ -206,37 +210,37 @@ section.hero-container{
   padding: 1.5rem;
   text-align: center;
 }
-.hero-details-holder h2{
+.hero-details-holder h2 {
   text-align: center;
   font-size: 5rem;
   font-weight: 900;
-  font-family: 'Moon dance';
+  font-family: "Moon dance";
   color: var(--light-orange);
   text-transform: uppercase;
   margin: 0;
 }
-.hero-details-holder h3{
+.hero-details-holder h3 {
   color: var(--light-white);
   font-size: 3rem;
   margin-top: 1rem;
 }
-.hero-details-holder strong{
+.hero-details-holder strong {
   color: var(--orange);
 }
-.hero-details-holder :where(h3, p){
+.hero-details-holder :where(h3, p) {
   line-height: 1.8cm;
 }
-.hero-details-holder p{
+.hero-details-holder p {
   font-weight: 600;
   font-size: 2.4rem;
   margin-bottom: 5rem;
   color: var(--light-orange);
 }
-.hero-details-holder p>strong{
+.hero-details-holder p > strong {
   display: block;
 }
 
-.unique-details{
+.unique-details {
   width: 99%;
   margin: 1.5rem auto 0;
   justify-content: center;
@@ -244,7 +248,7 @@ section.hero-container{
   gap: 1rem;
 }
 
-.unique-detail{
+.unique-detail {
   background-color: var(--light-orange);
   color: var(--dark-orange);
   padding: 1rem 2rem;
@@ -252,11 +256,11 @@ section.hero-container{
   width: 23rem;
   text-align: center;
   place-content: center;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   flex-direction: column;
   font-size: 1.8rem;
 }
-.unique-detail i{
+.unique-detail i {
   font-style: normal;
   font-weight: 700;
   font-size: 3.5rem;
@@ -264,45 +268,38 @@ section.hero-container{
   width: 10rem;
   height: 10rem;
   margin: 1rem auto;
-  border: .8rem solid var(--dark-slate);
+  border: 0.8rem solid var(--dark-slate);
   place-content: center;
   border-radius: 50%;
 }
 
-.btn-holder{
+.btn-holder {
   justify-content: center;
   margin: 4rem auto 2rem;
   gap: 5rem;
 }
-button{
-  all: unset;
-}
-
-.btn-holder button{
+.btn-holder button {
   padding: 2rem 8rem;
   margin: 1rem 2rem;
   font-size: 2.4rem;
   font-weight: 600;
   border-radius: 1rem;
-  border: .4rem solid;
-  letter-spacing: .3mm;
+  border: 0.4rem solid;
+  letter-spacing: 0.3mm;
   cursor: pointer;
   text-wrap: nowrap;
 }
-.btn-holder button>a{
-  all: unset;
-}
-.btn-holder .explore{
+.btn-holder .explore {
   border-color: var(--light-orange);
   color: var(--light-orange);
 }
-.btn-holder .book-house{
+.btn-holder .book-house {
   background-color: var(--light-orange);
   border: none;
-  color: var(--medium-slate)
+  color: var(--medium-slate);
 }
 
-img{
+.hero-container img {
   margin-top: 1rem;
   max-width: 48.2%;
   max-height: 95vh;
@@ -310,33 +307,211 @@ img{
   border-radius: 2rem 0 0 2rem;
 }
 
-@media screen and (max-width: 96em) and (min-width: 84em){
+@media screen and (max-width: 96em) and (min-width: 84em) {
   .btn-holder button {
     margin-top: 3.9rem;
   }
 }
 @media screen and (max-width: 70em) {
-  section.hero-container{
+  section.hero-container {
     flex-direction: column-reverse;
   }
-  .hero-container img{
+  .hero-container img {
     place-self: center;
     max-width: 95%;
     margin-top: 2rem;
     border-radius: 2rem;
   }
 }
-@media screen and (max-width: 49.5em){
-  .btn-holder{
+@media screen and (max-width: 49.5em) {
+  .btn-holder {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 24em){
-  .btn-holder :is(.explore, .book-house){
+@media screen and (max-width: 24em) {
+  .btn-holder :is(.explore, .book-house) {
     margin-left: -1rem;
   }
 }
 /* end of Hero section */
 
 /* main Section */
+main {
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 99%;
+  padding: 2rem 1rem;
+}
+
+main h2 {
+  text-align: center;
+  margin: 2rem auto 4rem;
+  font-size: 5rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: var(--dark-brown);
+}
+.house-categories {
+  padding: 4rem 1rem;
+  background-color: lightslategray;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+.house-card {
+  flex-direction: column;
+  max-width: 40rem;
+  padding-bottom: 0.6rem;
+  height: 48rem;
+  overflow: hidden;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 0 0.5rem rgb(250, 111, 4);
+}
+.oneB .house-description li {
+  margin: 0;
+}
+.oneB .house-description p {
+  margin: 0;
+}
+.twoB img {
+  min-height: 26rem;
+}
+.house-card img {
+  height: 26rem;
+  object-fit: cover;
+}
+.house-card button.book-house {
+  position: absolute;
+  border-radius: 0.5rem;
+  right: 0.6rem;
+  bottom: 50%;
+  color: var(--dark-blue);
+  background-color: #ebe9e9cf;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 1px 1px 1rem var(--orange);
+  transition: transform 0.3s ease-in-out;
+}
+.house-card button.book-house:hover {
+  transform: translateY(-0.5rem);
+}
+.house-card .house-description {
+  padding: 2rem;
+  margin: 0 0 1rem;
+  background-color: rgb(244, 250, 251);
+  min-height: 22rem;
+}
+.house-description h3 {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin: -1.5rem 0 1rem;
+  color: var(--dark-brown);
+}
+.house-description li {
+  list-style-type: none;
+  margin: 1.5rem auto;
+  font-size: 1.6rem;
+}
+.house-description li :where(i, b) {
+  color: var(--dark-slate);
+}
+.house-description li u {
+  text-decoration: none;
+  margin: 0 1rem 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--orange);
+}
+.house-description p {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--dark-brown);
+  font-weight: 500;
+}
+
+main h2 {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  height: 11rem;
+  width: 100%;
+  background-color: var(--light-white);
+  line-height: 1.5cm;
+}
+
+@media screen and (min-width: 117em) and (max-width: 132.625em) {
+  .house-card {
+    max-width: 42rem;
+  }
+  .house-categories {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 88.625em) and (max-width: 106.875em) {
+  .house-card {
+    max-width: 45rem;
+  }
+  .house-categories {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 62.625em) and (max-width: 79.875em) {
+  .house-card {
+    max-width: 47rem;
+  }
+  .house-categories {
+    gap: 4.5rem;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 52.5em) {
+  .house-card,
+  .oneB,
+  .twoB {
+    max-width: 58rem;
+  }
+  .house-categories {
+    gap: rem;
+  }
+}
+
+/* Amenities */
+section.amenities {
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 3rem;
+}
+
+.amenity-card {
+  flex-direction: column;
+  height: 32rem;
+  width: 32rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--medium-slate);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin: 0.5rem 1.5rem;
+}
+.amenity-card img {
+  margin-bottom: 2rem;
+  width: 20rem;
+  background-color: var(--light-white);
+  border-radius: 50%;
+  object-fit: cover;
+}
+.amenity-card p {
+  font-size: 1.7rem;
+  color: var(--light-orange);
+  text-align: center;
+}
+.amenity-card p > strong {
+  display: block;
+  color: var(--orange);
+  font-size: 2.5rem;
+}
 /* End of main Section */
