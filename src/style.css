@@ -14,7 +14,7 @@
 
   --light-orange: rgb(254, 235, 209);
   --light-white: #ebe9e9;
-  --slate: slategray;
+  --slate: rgb(101, 119, 137);
   --medium-slate: rgb(59, 75, 93);
   --dark-slate: darkslategray;
   --light-slate: lightslategray;
@@ -57,9 +57,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1.5rem 6rem;
+  padding: 0.5rem 0 3rem;
   background-color: var(--light-orange);
-  margin: 0 auto 2rem;
+  margin: 0 auto;
 }
 
 .contact-info-holder,
@@ -104,6 +104,9 @@ header {
   min-width: full;
   border-radius: 0.5rem;
   padding: 2rem 1rem;
+  position: sticky !important;
+  top: 10rem; 
+
 }
 
 .navigate > h2.title {
@@ -147,7 +150,7 @@ header {
 }
 
 .navs li:hover {
-  background-color: var(--dark-orange);
+  background-color: var(--orange);
   scale: 1.1;
 }
 
@@ -159,6 +162,14 @@ header {
   font-size: 3.5rem;
   color: var(--dark-blue);
   display: none;
+}
+@media screen and (max-width: 56em) and (min-width: 46em) {
+  .navs li:hover{
+    scale: 1.03;
+  }
+  .navs li {
+    padding: .8rem!important;
+  }
 }
 
 @media screen and (max-width: 46em) {
@@ -197,18 +208,17 @@ section.hero-container{
 }
 .hero-details-holder h2{
   text-align: center;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 900;
   font-family: 'Moon dance';
-  text-wrap: nowrap;
   color: var(--light-orange);
   text-transform: uppercase;
-
+  margin: 0;
 }
 .hero-details-holder h3{
   color: var(--light-white);
   font-size: 3rem;
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 .hero-details-holder strong{
   color: var(--orange);
@@ -260,9 +270,9 @@ section.hero-container{
 }
 
 .btn-holder{
-    justify-content: center;
-    margin: 4rem auto 2rem;
-    gap: 5rem;
+  justify-content: center;
+  margin: 4rem auto 2rem;
+  gap: 5rem;
 }
 button{
   all: unset;
@@ -277,8 +287,11 @@ button{
   border: .4rem solid;
   letter-spacing: .3mm;
   cursor: pointer;
+  text-wrap: nowrap;
 }
-
+.btn-holder button>a{
+  all: unset;
+}
 .btn-holder .explore{
   border-color: var(--light-orange);
   color: var(--light-orange);
@@ -290,9 +303,40 @@ button{
 }
 
 img{
+  margin-top: 1rem;
   max-width: 48.2%;
   max-height: 95vh;
   object-fit: cover;
   border-radius: 2rem 0 0 2rem;
 }
 
+@media screen and (max-width: 96em) and (min-width: 84em){
+  .btn-holder button {
+    margin-top: 3.9rem;
+  }
+}
+@media screen and (max-width: 70em) {
+  section.hero-container{
+    flex-direction: column-reverse;
+  }
+  .hero-container img{
+    place-self: center;
+    max-width: 95%;
+    margin-top: 2rem;
+    border-radius: 2rem;
+  }
+}
+@media screen and (max-width: 49.5em){
+  .btn-holder{
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 24em){
+  .btn-holder :is(.explore, .book-house){
+    margin-left: -1rem;
+  }
+}
+/* end of Hero section */
+
+/* main Section */
+/* End of main Section */
