@@ -15,10 +15,11 @@
   --light-orange: rgb(254, 235, 209);
   --light-white: #ebe9e9;
   --slate: slategray;
+  --medium-slate: rgb(59, 75, 93);
   --dark-slate: darkslategray;
   --light-slate: lightslategray;
   --color-dark: rgb(27, 29, 30);
-  --orange: rgb(255, 111, 0);
+  --orange: rgb(228, 115, 28);
   --dark-orange: rgb(220, 105, 23);
   --dark-blue: rgb(4, 43, 106);
 
@@ -47,16 +48,18 @@ html {
 body {
   width: 100%;
   height: 100vh;
+  background-color: var(--light-white);
 }
 header {
   position: relative;
-  width: 98.3%;
+  width: full;
   min-height: 10rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1.5rem 1rem;
+  padding: 0.5rem 1.5rem 6rem;
   background-color: var(--light-orange);
+  margin: 0 auto 2rem;
 }
 
 .contact-info-holder,
@@ -97,14 +100,14 @@ header {
   cursor: pointer;
 }
 .navigate {
-  background-color: var(--slate); /*#99bcc6; */
+  background-color: var(--medium-slate); /*#99bcc6; */
   min-width: full;
   border-radius: 0.5rem;
   padding: 2rem 1rem;
 }
 
 .navigate > h2.title {
-  color: var(--dark-blue);
+  color: var(--light-white);
   font-size: 3rem;
   width: 30%;
   text-align: left;
@@ -130,7 +133,7 @@ header {
 }
 
 .navigate .navs li {
-  background-color: var(--light-slate);
+  background-color: var(--slate);
   padding: 0.6rem 1rem;
   border-radius: 0.4rem;
   transition: scale 0.3s ease-in-out;
@@ -178,3 +181,116 @@ header {
     margin: 0;
   }
 }
+
+/* Hero Section */
+section.hero-container{
+  background-color: var(--medium-slate);
+  width: full;
+}
+.hero-details-holder{
+  position: relative;
+  min-width: 50%;
+  flex-direction: column;
+  color: var(--light-orange);
+  padding: 1.5rem;
+  text-align: center;
+}
+.hero-details-holder h2{
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 900;
+  font-family: 'Moon dance';
+  text-wrap: nowrap;
+  color: var(--light-orange);
+  text-transform: uppercase;
+
+}
+.hero-details-holder h3{
+  color: var(--light-white);
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+.hero-details-holder strong{
+  color: var(--orange);
+}
+.hero-details-holder p{
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-bottom: 5rem;
+  color: var(--light-orange);
+}
+.hero-details-holder p>strong{
+  display: block;
+}
+
+.unique-details{
+  width: 80%;
+  margin: 1.5rem auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .8rem;
+}
+
+.unique-detail{
+  background-color: var(--light-orange);
+  color: var(--dark-orange);
+  padding: 1rem 2rem;
+  border-radius: 2.8rem;
+  min-height: 10rem;
+  width: 25rem;
+  text-align: center;
+  place-content: center;
+  margin: .5rem;
+  flex-direction: column;
+  font-size: 1.8rem;
+}
+.unique-detail i{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: var(--dark-orange);
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem auto;
+  border: .8rem solid var(--dark-slate);
+  place-content: center;
+  border-radius: 50%;
+}
+
+.btn-holder{
+    justify-content: center;
+    margin: 4rem auto 2rem;
+    gap: 5rem;
+}
+button{
+  all: unset;
+}
+
+.btn-holder button{
+  padding: 2rem 8rem;
+  margin: 1rem 2rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  border: .4rem solid;
+  letter-spacing: .3mm;
+  cursor: pointer;
+}
+
+.btn-holder .explore{
+  border-color: var(--light-orange);
+  color: var(--light-orange);
+}
+.btn-holder .book-house{
+  background-color: var(--light-orange);
+  border: none;
+  color: var(--medium-slate)
+}
+
+img{
+  max-width: 48.2%;
+  max-height: 95vh;
+  object-fit: cover;
+  border-radius: 2rem 0 0 2rem;
+}
+
