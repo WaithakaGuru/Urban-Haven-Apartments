@@ -86,24 +86,6 @@
       <main id="main" class="flex">
         <h2>Apartments near you</h2>
         <section class="house-categories flex">
-          <div class="house-card flex twoB">
-            <img src="./singleroom.jpeg" alt="" />
-            <button class="book-house">
-              <a href="#contact">Book A Tour</a>
-            </button>
-            <div class="house-description">
-              <h3><i class="fa-solid fa-person-shelter"></i> Single rooms</h3>
-              <li>
-                <b><i class="fa-solid fa-map-location-dot"></i> Location:</b>
-                <u>Kiharu Section B</u>
-              </li>
-              <li>
-                <b><i class="fa-solid fa-money-check-dollar"></i> Pricing:</b>
-                <u>Kshs.3500 per month</u>
-              </li>
-              <p>cozy and budget friendly rooms suitable for individuals</p>
-            </div>
-          </div>
           <div class="house-card flex">
             <img src="./bedsitter3.jpg" alt="" />
             <button class="book-house">
@@ -122,6 +104,27 @@
               <p>
                 cozy and comfortable bedsitters with a kitchen area and sink
                 suitable for individuals and couples
+              </p>
+            </div>
+          </div>
+          <div class="house-card flex">
+            <img src="./one-bedRoom.jpg" alt="singleroom picture" />
+            <button class="book-house">
+              <a href="#contact">Book A Tour</a>
+            </button>
+            <div class="house-description">
+              <h3><i class="fa-solid fa-person-shelter"></i> Single rooms</h3>
+              <li>
+                <b><i class="fa-solid fa-map-location-dot"></i> Location:</b>
+                <u>Kiharu Section B</u>
+              </li>
+              <li>
+                <b><i class="fa-solid fa-money-check-dollar"></i> Pricing:</b>
+                <u>Kshs.3500 per month</u>
+              </li>
+              <p>
+                cozy and budget friendly rooms suitable for individual Lorem
+                ipsum dolor sit amet.s
               </p>
             </div>
           </div>
@@ -324,25 +327,49 @@
             >
           </div>
         </div>
-        <p>Coverse with us by leaving your message below</p>
+        <p>Converse with us by leaving your message below</p>
         <form>
           <div class="names-holder flex">
             <div class="fname flex">
               <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" required />
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter your first name"
+                required
+              />
             </div>
             <div class="lname flex">
               <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" required />
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter your second name"
+                required
+              />
             </div>
           </div>
           <div class="email flex">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
           </div>
           <div class="message flex">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Share your thoughts"
+              required
+            ></textarea>
           </div>
           <button type="submit">Send Message</button>
         </form>

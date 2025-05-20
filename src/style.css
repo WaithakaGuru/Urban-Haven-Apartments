@@ -343,10 +343,23 @@ section.hero-container {
   .btn-holder {
     flex-wrap: wrap;
   }
+  .btn-holder button {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 24em) {
   .btn-holder :is(.explore, .book-house) {
     margin-left: -1rem;
+  }
+}
+@media screen and (max-width: 55em) and (min-width: 36.5625em) {
+  .unique-detail {
+    width: 43%;
+  }
+}
+@media screen and (max-width: 42.4875em) {
+  .unique-detail {
+    width: 85%;
   }
 }
 /* end of Hero section */
@@ -404,11 +417,12 @@ main h2,
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 1.5rem;
+  width: 98vw;
 }
 .house-card {
   flex-direction: column;
-  max-width: 40rem;
+  min-width: 35rem;
   padding-bottom: 0.6rem;
   height: 48rem;
   overflow: hidden;
@@ -416,6 +430,7 @@ main h2,
   box-shadow: 0 0 0.5rem rgb(250, 111, 4);
   margin: 3.5rem auto;
 }
+
 .oneB .house-description li {
   margin: 0;
 }
@@ -491,18 +506,20 @@ main h2,
 }
 @media screen and (min-width: 88.625em) and (max-width: 106.875em) {
   .house-card {
-    max-width: 45rem;
+    max-width: 45%;
   }
   .house-categories {
     gap: 4rem;
   }
 }
-@media screen and (min-width: 62.625em) and (max-width: 79.875em) {
-  .house-card {
-    max-width: 47rem;
+@media screen and (min-width: 54.625em) and (max-width: 80.875em) {
+  .house-card,
+  .oneB,
+  .twoB {
+    max-width: 48%;
   }
   .house-categories {
-    gap: 4.5rem;
+    gap: 2.5rem;
   }
   main h2 {
     height: 11rem;
@@ -515,13 +532,12 @@ main h2,
     max-width: 58rem;
   }
   .house-categories {
-    gap: rem;
+    gap: 1rem;
   }
   main h2 {
     height: 11rem;
   }
 }
-
 /* Amenities */
 section.amenities {
   align-items: center;
@@ -559,6 +575,17 @@ section.amenities {
   color: var(--orange);
   font-size: 2.5rem;
 }
+@media screen and (max-width: 48.5em) {
+  .amenity-card {
+    min-width: 85%;
+  }
+}
+@media screen and (min-width: 48.5em) and (max-width: 70em) {
+  .amenity-card {
+    min-width: 43%;
+  }
+}
+
 /* End of Amenities*/
 /* End of main Section */
 
@@ -587,10 +614,10 @@ section#contact > p {
   margin: 1rem auto;
   border: 3px solid var(--dark-orange);
   border-radius: 0.4rem;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   font-size: 1.8rem;
   font-weight: 600;
-  align-items: flex-end;
+  align-items: first baseline;
   justify-content: space-evenly;
   width: 100%;
 }
@@ -616,7 +643,7 @@ form label {
   font-size: 1.5rem;
   font-weight: 700;
 }
-form input::placeholder {
+form ::placeholder {
   color: var(--dark-blue);
 }
 .names-holder {
@@ -652,11 +679,17 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
   background-color: var(--dark-slate);
 }
-@media screen and (max-width: 46.5626em){
-  .fname, .lname{
+@media screen and (max-width: 46.5626em) {
+  .phone-email {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .fname,
+  .lname {
     min-width: 95%;
   }
-  .scroll-to-top{
+  .scroll-to-top {
     right: 8rem;
   }
 }
@@ -667,6 +700,7 @@ footer {
   align-items: center;
   justify-content: center;
   width: 99.9%;
+  padding: 1rem 0 3rem;
 }
 footer p {
   display: inline;
