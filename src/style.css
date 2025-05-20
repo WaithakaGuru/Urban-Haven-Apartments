@@ -1,12 +1,19 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url(../fonts/DancingScript-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Great Vibes";
+  src: url("../fonts/GreatVibes-Regular.ttf");
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  /* color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424; */
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -25,7 +32,7 @@
   --dark-brown: rgb(90, 43, 2);
 
   --font-main: "open sans";
-  --font-other: "Moon Dance";
+  --font-other: "Moon Dance", "Dancing Script";
 }
 ::selection {
   background-color: var(--light-white);
@@ -221,7 +228,7 @@ section.hero-container {
   text-align: center;
   font-size: 5rem;
   font-weight: 900;
-  font-family: "Moon dance";
+  font-family: "Moon dance", "Dancing script", "Great Vibes";
   color: var(--light-orange);
   text-transform: uppercase;
   margin: 0;
@@ -422,13 +429,13 @@ main h2,
 }
 .house-card {
   flex-direction: column;
-  min-width: 35rem;
+  max-width: 40rem;
   padding-bottom: 0.6rem;
   height: 48rem;
   overflow: hidden;
   border-radius: 1.5rem !important;
   box-shadow: 0 0 0.5rem rgb(250, 111, 4);
-  margin: 3.5rem auto;
+  margin: 1.5rem auto;
 }
 
 .oneB .house-description li {
@@ -536,6 +543,12 @@ main h2,
   }
   main h2 {
     height: 11rem;
+  }
+}
+@media screen and (max-width: 31.25em) {
+  main h2,
+  .contact-title {
+    position: relative;
   }
 }
 /* Amenities */
