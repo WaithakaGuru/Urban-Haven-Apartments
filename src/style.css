@@ -39,6 +39,13 @@ button,
 button > a {
   all: unset;
 }
+button {
+  cursor: pointer;
+  transition: scale 0.4s ease-in-out;
+}
+button:active {
+  scale: 0.95;
+}
 /* End of customizing classes */
 * {
   margin: 0;
@@ -292,11 +299,20 @@ section.hero-container {
 .btn-holder .explore {
   border-color: var(--light-orange);
   color: var(--light-orange);
+  transition: all 0.4s ease-in-out;
+}
+.btn-holder .explore:hover {
+  color: var(--medium-slate);
+  background-color: var(--light-orange);
 }
 .btn-holder .book-house {
   background-color: var(--light-orange);
   border: none;
   color: var(--medium-slate);
+  transition: opacity 0.2s ease-in-out;
+}
+.btn-holder .book-house:hover {
+  opacity: 0.75;
 }
 
 .hero-container img {
@@ -334,6 +350,26 @@ section.hero-container {
   }
 }
 /* end of Hero section */
+/*Scroll to top button*/
+.scroll-to-top {
+  background-color: var(--dark-brown);
+  height: 6rem;
+  width: 6rem;
+  font-size: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+  position: fixed;
+  right: 4rem;
+  bottom: 12rem;
+}
+.scroll-to-top a {
+  color: var(--light-orange);
+  text-decoration: none;
+}
+/*End Scroll to top button*/
 
 /* main Section */
 main {
@@ -343,13 +379,24 @@ main {
   padding: 2rem 1rem;
 }
 
-main h2 {
+main h2,
+.contact-title {
   text-align: center;
   margin: 2rem auto 4rem;
   font-size: 5rem;
   font-weight: 800;
   text-transform: capitalize;
   color: var(--dark-brown);
+}
+main h2,
+.contact-title {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  height: 7rem;
+  width: 100%;
+  background-color: var(--light-white);
+  line-height: 1.5cm;
 }
 .house-categories {
   padding: 4rem 1rem;
@@ -367,6 +414,7 @@ main h2 {
   overflow: hidden;
   border-radius: 1.5rem !important;
   box-shadow: 0 0 0.5rem rgb(250, 111, 4);
+  margin: 3.5rem auto;
 }
 .oneB .house-description li {
   margin: 0;
@@ -433,16 +481,6 @@ main h2 {
   font-weight: 500;
 }
 
-main h2 {
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  height: 11rem;
-  width: 100%;
-  background-color: var(--light-white);
-  line-height: 1.5cm;
-}
-
 @media screen and (min-width: 117em) and (max-width: 132.625em) {
   .house-card {
     max-width: 42rem;
@@ -466,6 +504,9 @@ main h2 {
   .house-categories {
     gap: 4.5rem;
   }
+  main h2 {
+    height: 11rem;
+  }
 }
 @media screen and (min-width: 31.25em) and (max-width: 52.5em) {
   .house-card,
@@ -476,6 +517,9 @@ main h2 {
   .house-categories {
     gap: rem;
   }
+  main h2 {
+    height: 11rem;
+  }
 }
 
 /* Amenities */
@@ -484,6 +528,7 @@ section.amenities {
   justify-content: space-evenly;
   flex-wrap: wrap;
   row-gap: 3rem;
+  margin-bottom: 4rem;
 }
 
 .amenity-card {
@@ -514,4 +559,126 @@ section.amenities {
   color: var(--orange);
   font-size: 2.5rem;
 }
+/* End of Amenities*/
 /* End of main Section */
+
+/* contact and footer Section */
+section#contact {
+  flex-direction: column;
+  background-color: rgb(253, 249, 240);
+  width: 100%;
+}
+section#contact > p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  color: var(--dark-blue);
+  letter-spacing: 0.3mm;
+}
+.contact-info {
+  width: 75%;
+  margin: 2rem auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-info .phone-email,
+.socials {
+  margin: 1rem auto;
+  border: 3px solid var(--dark-orange);
+  border-radius: 0.4rem;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 100%;
+}
+form {
+  background-color: var(--light-white);
+  min-height: 40rem;
+  width: 70%;
+  margin: 0.5rem auto 8rem;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem var(--dark-brown);
+}
+.email,
+.message,
+.fname,
+.lname {
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 2rem auto;
+  min-width: 49%;
+}
+form label {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+form input::placeholder {
+  color: var(--dark-blue);
+}
+.names-holder {
+  width: 100%;
+  flex-wrap: wrap;
+}
+form input,
+form textarea {
+  outline: none;
+  padding: 1.5rem 2.5rem;
+  font-size: 1.8rem;
+  color: var(--dark-blue);
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+}
+form textarea {
+  max-width: 96%;
+  max-height: 15rem;
+  overflow-y: scroll;
+}
+form button[type="submit"] {
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: var(--slate);
+  padding: inherit;
+  margin: 1rem auto;
+  margin-left: 1rem;
+  border-radius: 0.4rem;
+  color: var(--light-white);
+  cursor: pointer;
+}
+form button[type="submit"]:hover {
+  background-color: var(--dark-slate);
+}
+@media screen and (max-width: 46.5626em){
+  .fname, .lname{
+    min-width: 95%;
+  }
+  .scroll-to-top{
+    right: 8rem;
+  }
+}
+footer {
+  background-color: var(--medium-slate);
+  height: 10rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 99.9%;
+}
+footer p {
+  display: inline;
+  color: var(--light-white);
+  font-size: 1.8rem;
+  padding: 1rem;
+  letter-spacing: 0.2mm;
+}
+footer p:first-of-type {
+  margin-top: 3rem;
+}
+footer p > a {
+  color: var(--light-orange);
+}
+/*End of contact and footer Section*/

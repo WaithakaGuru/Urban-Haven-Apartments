@@ -47,7 +47,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#main">U-Haven Specials</a></li>
             <li><a href="#contact">Reach out</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#amenities">About</a></li>
           </ul>
           <i class="fa-solid fa-bars menu"></i>
         </div>
@@ -82,12 +82,15 @@
         </div>
         <img src="./UrbanHome-Hero.jpg" alt="Hero image" />
       </section>
+      <div class="scroll-to-top"><a href="#home">&uArr;</a></div>
       <main id="main" class="flex">
         <h2>Apartments near you</h2>
         <section class="house-categories flex">
           <div class="house-card flex twoB">
             <img src="./singleroom.jpeg" alt="" />
-            <button class="book-house">Book A Tour</button>
+            <button class="book-house">
+              <a href="#contact">Book A Tour</a>
+            </button>
             <div class="house-description">
               <h3><i class="fa-solid fa-person-shelter"></i> Single rooms</h3>
               <li>
@@ -103,7 +106,9 @@
           </div>
           <div class="house-card flex">
             <img src="./bedsitter3.jpg" alt="" />
-            <button class="book-house">Book A Tour</button>
+            <button class="book-house">
+              <a href="#contact">Book A Tour</a>
+            </button>
             <div class="house-description">
               <h3><i class="fa-solid fa-person-shelter"></i> BedSitters</h3>
               <li>
@@ -122,7 +127,9 @@
           </div>
           <div class="house-card flex oneB">
             <img src="./onebedroomContained.jpg" alt="" />
-            <button class="book-house">Book A Tour</button>
+            <button class="book-house">
+              <a href="#contact">Book A Tour</a>
+            </button>
             <div class="house-description">
               <h3>
                 <i class="fa-solid fa-person-shelter"></i> Studio apartments
@@ -144,7 +151,9 @@
           </div>
           <div class="house-card flex">
             <img src="./one-bedRoom.jpg" alt="" />
-            <button class="book-house">Book A Tour</button>
+            <button class="book-house">
+              <a href="#contact">Book A Tour</a>
+            </button>
             <div class="house-description">
               <h3><i class="fa-solid fa-person-shelter"></i> One-Bedrooms</h3>
               <li>
@@ -163,7 +172,9 @@
           </div>
           <div class="house-card flex">
             <img src="./two bedroom.jpg" alt="" />
-            <button class="book-house">Book A Tour</button>
+            <button class="book-house">
+              <a href="#contact">Book A Tour</a>
+            </button>
             <div class="house-description">
               <h3><i class="fa-solid fa-person-shelter"></i> Two-Bedrooms</h3>
               <li>
@@ -182,7 +193,9 @@
           </div>
           <div class="house-card flex oneB">
             <img src="./twobedroom.jpg" alt="" />
-            <button class="book-house">Book A Tour</button>
+            <button class="book-house">
+              <a href="#contact">Book A Tour</a>
+            </button>
             <div class="house-description">
               <h3>
                 <i class="fa-solid fa-person-shelter"></i> One bedroom
@@ -204,7 +217,9 @@
           </div>
           <div class="house-card flex oneB twoB">
             <img src="./two bedroomContained.jpg" alt="" />
-            <button class="book-house">Book A Tour</button>
+            <button class="book-house">
+              <a href="#contact">Book A Tour</a>
+            </button>
             <div class="house-description">
               <h3>
                 <i class="fa-solid fa-person-shelter"></i> Two bedroom
@@ -226,7 +241,7 @@
           </div>
         </section>
         <h2>Silver lining: Amenities</h2>
-        <section class="amenities flex">
+        <section class="amenities flex" id="amenities">
           <div class="amenity-card flex">
             <img src="./wifi-ammenity.png" alt="" />
             <p class="info">
@@ -285,9 +300,61 @@
           </div>
         </section>
       </main>
-      <section id="contact">
-        <form action=""></form>
-        <footer></footer>
+      <section class="about" id="about"></section>
+      <h2 class="contact-title">Hop on a chat</h2>
+      <section id="contact" class="flex">
+        <p>Call, Email or Visit our Social media platforms</p>
+        <div class="contact-info flex">
+          <div class="phone-email flex">
+            <p>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+254718764327">+254718764327</a>
+            </p>
+            <p>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:urhaven@apartments.com">urhaven@apartments.com</a>
+            </p>
+          </div>
+          <div class="socials flex">
+            <a href="#" target="_blank"
+              ><i class="fab fa-facebook"></i> Facebook</a
+            >
+            <a href="#" target="_blank"
+              ><i class="fab fa-instagram"></i> Instagram</a
+            >
+          </div>
+        </div>
+        <p>Coverse with us by leaving your message below</p>
+        <form>
+          <div class="names-holder flex">
+            <div class="fname flex">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="lname flex">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+          </div>
+          <div class="email flex">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="message flex">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+        <footer class="flex">
+          <p>&copy; 2025 Urban Haven Apartments. All rights reserved.</p>
+          <p>
+            Built and Crafted with &hearts; by
+            <a href="https://github.com/WaithakaGuru/" target="_blank"
+              >Waithaka Amos (Wofis Tech)</a
+            >;
+          </p>
+        </footer>
       </section>
     </div>
   </body>
