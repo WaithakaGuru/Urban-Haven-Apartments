@@ -42,18 +42,22 @@
 .flex {
   display: flex;
 }
+
 button,
 button > a {
   all: unset;
 }
+
 button {
   cursor: pointer;
   transition: scale 0.4s ease-in-out;
 }
+
 button:active {
   scale: 0.95;
 }
 /* End of customizing classes */
+
 * {
   margin: 0;
   padding: 0;
@@ -61,14 +65,17 @@ button:active {
   position: relative;
   color: var(--color-dark);
 }
+
 html {
-  font-size: 10px;
+  font-size: 8px;
 }
+
 body {
   width: 100%;
   height: 100vh;
   background-color: var(--light-white);
 }
+
 header {
   position: relative;
   width: full;
@@ -216,6 +223,7 @@ section.hero-container {
   background-color: var(--medium-slate);
   width: full;
 }
+
 .hero-details-holder {
   position: relative;
   min-width: 50%;
@@ -224,6 +232,7 @@ section.hero-container {
   padding: 1.5rem;
   text-align: center;
 }
+
 .hero-details-holder h2 {
   text-align: center;
   font-size: 5rem;
@@ -233,23 +242,28 @@ section.hero-container {
   text-transform: uppercase;
   margin: 0;
 }
+
 .hero-details-holder h3 {
   color: var(--light-white);
   font-size: 3rem;
   margin-top: 1rem;
 }
+
 .hero-details-holder strong {
   color: var(--orange);
 }
+
 .hero-details-holder :where(h3, p) {
   line-height: 1.8cm;
 }
+
 .hero-details-holder p {
   font-weight: 600;
   font-size: 2.4rem;
   margin-bottom: 5rem;
   color: var(--light-orange);
 }
+
 .hero-details-holder p > strong {
   display: block;
 }
@@ -303,21 +317,25 @@ section.hero-container {
   cursor: pointer;
   text-wrap: nowrap;
 }
+
 .btn-holder .explore {
   border-color: var(--light-orange);
   color: var(--light-orange);
   transition: all 0.4s ease-in-out;
 }
+
 .btn-holder .explore:hover {
   color: var(--medium-slate);
   background-color: var(--light-orange);
 }
+
 .btn-holder .book-house {
   background-color: var(--light-orange);
   border: none;
   color: var(--medium-slate);
   transition: opacity 0.2s ease-in-out;
 }
+
 .btn-holder .book-house:hover {
   opacity: 0.75;
 }
@@ -335,6 +353,7 @@ section.hero-container {
     margin-top: 3.9rem;
   }
 }
+
 @media screen and (max-width: 70em) {
   section.hero-container {
     flex-direction: column-reverse;
@@ -346,6 +365,7 @@ section.hero-container {
     border-radius: 2rem;
   }
 }
+
 @media screen and (max-width: 49.5em) {
   .btn-holder {
     flex-wrap: wrap;
@@ -354,22 +374,26 @@ section.hero-container {
     width: 90%;
   }
 }
+
 @media screen and (max-width: 24em) {
   .btn-holder :is(.explore, .book-house) {
     margin-left: -1rem;
   }
 }
+
 @media screen and (max-width: 55em) and (min-width: 36.5625em) {
   .unique-detail {
     width: 43%;
   }
 }
+
 @media screen and (max-width: 42.4875em) {
   .unique-detail {
     width: 85%;
   }
 }
 /* end of Hero section */
+
 /*Scroll to top button*/
 .scroll-to-top {
   background-color: var(--dark-brown);
@@ -385,6 +409,7 @@ section.hero-container {
   right: 4rem;
   bottom: 12rem;
 }
+
 .scroll-to-top a {
   color: var(--light-orange);
   text-decoration: none;
@@ -408,6 +433,7 @@ main h2,
   text-transform: capitalize;
   color: var(--dark-brown);
 }
+
 main h2,
 .contact-title {
   position: sticky;
@@ -418,6 +444,7 @@ main h2,
   background-color: var(--light-white);
   line-height: 1.5cm;
 }
+
 .house-categories {
   padding: 4rem 1rem;
   background-color: lightslategray;
@@ -427,6 +454,7 @@ main h2,
   gap: 1.5rem;
   width: 98vw;
 }
+
 .house-card {
   flex-direction: column;
   max-width: 40rem;
@@ -441,16 +469,20 @@ main h2,
 .oneB .house-description li {
   margin: 0;
 }
+
 .oneB .house-description p {
   margin: 0;
 }
+
 .twoB img {
   min-height: 26rem;
 }
+
 .house-card img {
   height: 26rem;
   object-fit: cover;
 }
+
 .house-card button.book-house {
   position: absolute;
   border-radius: 0.5rem;
@@ -465,29 +497,35 @@ main h2,
   box-shadow: 1px 1px 1rem var(--orange);
   transition: transform 0.3s ease-in-out;
 }
+
 .house-card button.book-house:hover {
   transform: translateY(-0.5rem);
 }
+
 .house-card .house-description {
   padding: 2rem;
   margin: 0 0 1rem;
   background-color: rgb(244, 250, 251);
   min-height: 22rem;
 }
+
 .house-description h3 {
   text-transform: uppercase;
   font-size: 2.4rem;
   margin: -1.5rem 0 1rem;
   color: var(--dark-brown);
 }
+
 .house-description li {
   list-style-type: none;
   margin: 1.5rem auto;
   font-size: 1.6rem;
 }
+
 .house-description li :where(i, b) {
   color: var(--dark-slate);
 }
+
 .house-description li u {
   text-decoration: none;
   margin: 0 1rem 0;
@@ -495,6 +533,7 @@ main h2,
   font-size: 1.8rem;
   color: var(--orange);
 }
+
 .house-description p {
   text-transform: capitalize;
   font-size: 1.5rem;
@@ -511,6 +550,7 @@ main h2,
     gap: 4rem;
   }
 }
+
 @media screen and (min-width: 88.625em) and (max-width: 106.875em) {
   .house-card {
     max-width: 45%;
@@ -519,6 +559,7 @@ main h2,
     gap: 4rem;
   }
 }
+
 @media screen and (min-width: 54.625em) and (max-width: 80.875em) {
   .house-card,
   .oneB,
@@ -532,6 +573,7 @@ main h2,
     height: 11rem;
   }
 }
+
 @media screen and (min-width: 31.25em) and (max-width: 52.5em) {
   .house-card,
   .oneB,
@@ -545,12 +587,14 @@ main h2,
     height: 11rem;
   }
 }
+
 @media screen and (max-width: 31.25em) {
   main h2,
   .contact-title {
     position: relative;
   }
 }
+
 /* Amenities */
 section.amenities {
   align-items: center;
@@ -571,6 +615,7 @@ section.amenities {
   padding: 1rem;
   margin: 0.5rem 1.5rem;
 }
+
 .amenity-card img {
   margin-bottom: 2rem;
   width: 20rem;
@@ -578,27 +623,30 @@ section.amenities {
   border-radius: 50%;
   object-fit: cover;
 }
+
 .amenity-card p {
   font-size: 1.7rem;
   color: var(--light-orange);
   text-align: center;
 }
+
 .amenity-card p > strong {
   display: block;
   color: var(--orange);
   font-size: 2.5rem;
 }
+
 @media screen and (max-width: 48.5em) {
   .amenity-card {
     min-width: 85%;
   }
 }
+
 @media screen and (min-width: 48.5em) and (max-width: 70em) {
   .amenity-card {
     min-width: 43%;
   }
 }
-
 /* End of Amenities*/
 /* End of main Section */
 
@@ -608,6 +656,7 @@ section#contact {
   background-color: rgb(253, 249, 240);
   width: 100%;
 }
+
 section#contact > p {
   text-align: center;
   margin-top: 1rem;
@@ -615,6 +664,7 @@ section#contact > p {
   color: var(--dark-blue);
   letter-spacing: 0.3mm;
 }
+
 .contact-info {
   width: 75%;
   margin: 2rem auto;
@@ -622,6 +672,7 @@ section#contact > p {
   justify-content: center;
   align-items: center;
 }
+
 .contact-info .phone-email,
 .socials {
   margin: 1rem auto;
@@ -634,6 +685,7 @@ section#contact > p {
   justify-content: space-evenly;
   width: 100%;
 }
+
 form {
   background-color: var(--light-white);
   min-height: 40rem;
@@ -643,6 +695,7 @@ form {
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem var(--dark-brown);
 }
+
 .email,
 .message,
 .fname,
@@ -652,17 +705,21 @@ form {
   margin: 2rem auto;
   min-width: 49%;
 }
+
 form label {
   font-size: 1.5rem;
   font-weight: 700;
 }
+
 form ::placeholder {
   color: var(--dark-blue);
 }
+
 .names-holder {
   width: 100%;
   flex-wrap: wrap;
 }
+
 form input,
 form textarea {
   outline: none;
@@ -673,11 +730,13 @@ form textarea {
   border: none;
   font-weight: 500;
 }
+
 form textarea {
   max-width: 96%;
   max-height: 15rem;
   overflow-y: scroll;
 }
+
 form button[type="submit"] {
   font-size: 1.6rem;
   font-weight: 600;
@@ -689,9 +748,11 @@ form button[type="submit"] {
   color: var(--light-white);
   cursor: pointer;
 }
+
 form button[type="submit"]:hover {
   background-color: var(--dark-slate);
 }
+
 @media screen and (max-width: 46.5626em) {
   .phone-email {
     flex-direction: column;
@@ -706,6 +767,7 @@ form button[type="submit"]:hover {
     right: 8rem;
   }
 }
+
 footer {
   background-color: var(--medium-slate);
   height: 10rem;
@@ -715,6 +777,7 @@ footer {
   width: 99.9%;
   padding: 1rem 0 3rem;
 }
+
 footer p {
   display: inline;
   color: var(--light-white);
@@ -722,9 +785,11 @@ footer p {
   padding: 1rem;
   letter-spacing: 0.2mm;
 }
+
 footer p:first-of-type {
   margin-top: 3rem;
 }
+
 footer p > a {
   color: var(--light-orange);
 }
